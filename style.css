@@ -1,0 +1,15 @@
+/* Lorem Ipsum CV Stylesheet*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0px;
+  font-family: "Dosis", sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-family: "Indie Flower", cursive;
+}
