@@ -1,16 +1,39 @@
 /* Lorem Ipsum CV Stylesheet*/
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
-html {
+body {
   margin: 0px;
   font-family: "Dosis", sans-serif;
 }
 
-h1,
+h1 {
+  font-family: "Tilt Prism", sans-serif;
+  color: white;
+}
+
 h2,
 h3 {
-  font-family: "Indie Flower", cursive;
+  font-family: "Tilt Prism", sans-serif;
+  color: darkcyan;
+}
+
+/* Individual Stylings */
+
+.header {
+  padding: 48px 16px;
+  text-align: center;
+  color: white;
+  background-color: darkcyan;
+  padding: 30px;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
 }
