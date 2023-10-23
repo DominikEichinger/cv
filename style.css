@@ -22,6 +22,11 @@ h3 {
   color: darkcyan;
 }
 
+::selection {
+  background-color: darkcyan;
+  color: white;
+}
+
 /* Individual Stylings */
 
 .header {
@@ -32,8 +37,33 @@ h3 {
   padding: 30px;
 }
 
+.smiley::after {
+  content: " 👾";
+}
+
+.navlink {
+  color: white;
+}
+
+.navlink:hover {
+  color: goldenrod;
+}
+
+.navlink:active {
+  color: darkgoldenrod;
+}
+
+.navlink + .navlink {
+  margin-left: 20px;
+}
+
 .main {
   max-width: 800px;
   margin: 0 auto;
   padding: 16px;
+}
+
+article + article {
+  margin-top: 48px;
+  border-top: 1px solid darkgray;
 }
