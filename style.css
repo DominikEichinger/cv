@@ -6,16 +6,17 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: "Dosis", sans-serif;
+  font-size: 20px;
+}
+
 body {
   margin: 0px;
   font-family: "Dosis", sans-serif;
 }
 
-h1 {
-  font-family: "Tilt Prism", sans-serif;
-  color: white;
-}
-
+h1,
 h2,
 h3 {
   font-family: "Tilt Prism", sans-serif;
@@ -35,6 +36,10 @@ h3 {
   color: white;
   background-color: darkcyan;
   padding: 30px;
+}
+
+.headline {
+  color: white;
 }
 
 .smiley::after {
