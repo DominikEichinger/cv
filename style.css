@@ -72,3 +72,11 @@ article + article {
   margin-top: 48px;
   border-top: 1px solid darkgray;
 }
+
+.experience-heading {
+  display: inline-block;
+}
+
+.experience-subheading {
+  display: inline-block;
+}
