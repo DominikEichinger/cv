@@ -30,12 +30,13 @@ h3 {
 
 /* Individual Stylings */
 
+/* Kapiere nicht, warum Padding-Top extra gesetzt werden muss*/
 .header {
   padding: 48px 16px;
+  padding-top: 64px;
   text-align: center;
   color: white;
   background-color: darkcyan;
-  padding: 30px;
 }
 
 .headline {
@@ -62,10 +63,34 @@ h3 {
   margin-left: 20px;
 }
 
+/*Warum immer Pixelzahlen als Vielfache von 2?*/
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-family: "Tilt Prism", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: teal;
+  background-color: whitesmoke;
+  padding: 15px;
+  border: 2px solid rgb(103, 6, 173);
+  border-radius: 10px;
+}
+
 .main {
   max-width: 800px;
   margin: 0 auto;
   padding: 16px;
+}
+
+.main-headlines {
+  position: relative;
+  left: -30px;
+}
+
+.article-padding {
+  padding: 0px 30px 0px 30px;
 }
 
 article + article {
