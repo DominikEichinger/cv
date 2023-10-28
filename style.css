@@ -11,16 +11,16 @@ html {
   font-size: 20px;
 }
 
-body {
-  margin: 0px;
-  font-family: "Dosis", sans-serif;
-}
-
+/* Wenn hier die Schriftfarbe festgelegt wird, lässt sie sich nicht durch Class Selectors überschreiben. Warum?*/
 h1,
 h2,
 h3 {
   font-family: "Tilt Prism", sans-serif;
   color: darkcyan;
+}
+
+body {
+  margin: 0;
 }
 
 ::selection {
@@ -32,18 +32,27 @@ h3 {
 
 /* Kapiere nicht, warum Padding-Top extra gesetzt werden muss*/
 .header {
-  padding: 48px 16px;
-  padding-top: 64px;
+  padding: 2.5rem 1rem;
+  padding-top: 3.25rem;
   text-align: center;
   color: white;
   background-color: darkcyan;
 }
 
+.div {
+  font-size: 4rem;
+}
+
 .headline {
+  font-size: 1em;
   color: white;
 }
 
-.smiley::after {
+.profession {
+  font-size: 0.25em;
+}
+
+.profession::after {
   content: " 👾";
 }
 
@@ -63,39 +72,38 @@ h3 {
   margin-left: 20px;
 }
 
-/*Warum immer Pixelzahlen als Vielfache von 2?*/
 .badge {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 1rem;
+  right: 1rem;
   font-family: "Tilt Prism", sans-serif;
-  font-size: 25px;
+  font-size: 1.25rem;
   font-weight: bold;
   color: teal;
   background-color: whitesmoke;
-  padding: 15px;
-  border: 2px solid rgb(103, 6, 173);
-  border-radius: 10px;
+  padding: 0.75rem;
+  border: 0.1rem solid rgb(103, 6, 173);
+  border-radius: 0.5rem;
 }
 
 .main {
-  max-width: 800px;
+  max-width: 75ch;
   margin: 0 auto;
-  padding: 16px;
+  padding: 0.8rem;
 }
 
 .main-headlines {
   position: relative;
-  left: -30px;
+  left: -1.5rem;
 }
 
 .article-padding {
-  padding: 0px 30px 0px 30px;
+  padding: 0 1.5rem 0 1.5rem;
 }
 
 article + article {
-  margin-top: 48px;
-  border-top: 1px solid darkgray;
+  margin-top: 2.4rem;
+  border-top: 0.05rem solid darkgray;
 }
 
 .experience-heading {
