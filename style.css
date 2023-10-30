@@ -8,7 +8,32 @@
 
 html {
   font-family: "Dosis", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 20px;
+  }
+  article + article {
+    margin-top: 3rem;
+  }
+}
+
+/*Sollen immer alle Media Queries extra nochmal da gesetzt werden, wo sie zutreffen? Warum kann man sie nicht kombinieren? (zu unübersichtlich bei komplexeren Projekten?)*/
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 22px;
+  }
+  /* Ist es deshalb notwendig einen Class Selector und einen Child Combinator zu verwenden? Warum lassen sich die Articles nicht so ansprechen hier?*/
+  article + article {
+    margin-top: 5rem;
+    border-top: 0.05rem solid darkgray;
+  }
+  .badge {
+    position: fixed;
+  }
 }
 
 /* Wenn hier die Schriftfarbe festgelegt wird, lässt sie sich nicht durch Class Selectors überschreiben. Warum?*/
@@ -84,6 +109,27 @@ body {
   padding: 0.75rem;
   border: 0.1rem solid rgb(103, 6, 173);
   border-radius: 0.5rem;
+}
+
+@media print {
+  html {
+    color: black;
+    background-color: white;
+  }
+  .headline {
+    color: black;
+  }
+  h1,
+  h2,
+  h3 {
+    color: black;
+  }
+  .badge {
+    display: none;
+  }
+  .navlink {
+    display: none;
+  }
 }
 
 .main {
