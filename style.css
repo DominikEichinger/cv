@@ -11,12 +11,9 @@ html {
   font-size: 18px;
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   html {
     font-size: 20px;
-  }
-  article + article {
-    margin-top: 3rem;
   }
 }
 
@@ -25,14 +22,6 @@ html {
 @media screen and (min-width: 992px) {
   html {
     font-size: 22px;
-  }
-  /* Ist es deshalb notwendig einen Class Selector und einen Child Combinator zu verwenden? Warum lassen sich die Articles nicht so ansprechen hier?*/
-  article + article {
-    margin-top: 5rem;
-    border-top: 0.05rem solid darkgray;
-  }
-  .badge {
-    position: fixed;
   }
 }
 
@@ -81,6 +70,21 @@ body {
   content: " 👾";
 }
 
+.navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .navlink + .navlink {
+    margin-left: 20px;
+  }
+}
+
 .navlink {
   color: white;
 }
@@ -91,10 +95,6 @@ body {
 
 .navlink:active {
   color: darkgoldenrod;
-}
-
-.navlink + .navlink {
-  margin-left: 20px;
 }
 
 .badge {
@@ -109,6 +109,12 @@ body {
   padding: 0.75rem;
   border: 0.1rem solid rgb(103, 6, 173);
   border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .badge {
+    position: fixed;
+  }
 }
 
 @media print {
@@ -147,9 +153,36 @@ body {
   padding: 0 1.5rem 0 1.5rem;
 }
 
+/* Ist es deshalb notwendig einen Class Selector und einen Child Combinator zu verwenden? Warum lassen sich die Articles nicht so ansprechen hier?*/
+
 article + article {
   margin-top: 2.4rem;
   border-top: 0.05rem solid darkgray;
+}
+
+@media screen and (min-width: 768px) {
+  article + article {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  article + article {
+    margin-top: 5rem;
+    border-top: 0.05rem solid darkgray;
+  }
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .experience-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .experience-heading {
