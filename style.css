@@ -6,10 +6,9 @@
   box-sizing: border-box;
 }
 
-/*Warum Custom Properties nicht im html-Tag festlegen?*/
+/*Warum Custom Properties nicht im html-Tag festlegen? font-size in prozent angeben (verhältnismäßig zu standardgröße des browsers (16px))*/
 
 html {
-  font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
   --main-font-color: black;
   --header-footer-font-color: white;
@@ -42,7 +41,7 @@ html {
   }
 }
 
-/* Wenn hier die Schriftfarbe festgelegt wird, lässt sie sich nicht durch Class Selectors überschreiben. Warum?*/
+/* Wenn hier die Farbe hier spezifisch gesetzt wird, setzt die Vererbung aus*/
 h1,
 h2,
 h3 {
@@ -51,6 +50,9 @@ h3 {
 }
 
 body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: var(--page-background-color);
+  color: var(--page-text-color);
   margin: 0;
 }
 
@@ -63,6 +65,7 @@ body {
 
 /* Kapiere nicht, warum Padding-Top extra gesetzt werden muss*/
 .header {
+  --main-headings-color: white;
   padding: 2.5rem 1rem;
   padding-top: 3.25rem;
   text-align: center;
@@ -123,6 +126,10 @@ body {
   background-color: lightseagreen;
 }
 
+.navlink:focus {
+  color: var(--light-accent-color);
+}
+
 .badge {
   position: absolute;
   top: 1rem;
@@ -130,11 +137,31 @@ body {
   font-family: "Tilt Prism", sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
-  color: teal;
-  background-color: whitesmoke;
+  color: white;
+  background-color: rgb(0, 58, 58);
   padding: 0.75rem;
-  border: 0.1rem solid var(--dark-accent-color);
+  border: 0.1rem solid black;
   border-radius: 0.5rem;
+  opacity: 0.75;
+  transition: color 1.5s ease-in-out, background-color 1.5s ease-in-out,
+    border 1.5s ease-in-out, opacity 1.5s ease-in-out,
+    transform 1.5s ease-in-out;
+}
+
+.header:hover .badge {
+  transform: scale(1.5) translate(-25%, 25%) rotate(360deg);
+  color: teal;
+  border: 0.1rem solid var(--dark-accent-color);
+  background-color: white;
+  opacity: 1;
+}
+
+.header:focus-within .badge {
+  transform: scale(1.5) translate(-25%, 25%) rotate(360deg);
+  color: teal;
+  border: 0.1rem solid var(--dark-accent-color);
+  background-color: white;
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -178,8 +205,6 @@ body {
 .article-padding {
   padding: 0 1.5rem 0 1.5rem;
 }
-
-/* Ist es deshalb notwendig einen Class Selector und einen Child Combinator zu verwenden? Warum lassen sich die Articles nicht so ansprechen hier?*/
 
 article + article {
   margin-top: 2.4rem;
